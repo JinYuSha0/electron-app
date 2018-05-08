@@ -4,6 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const config = require('./package')
 
 //生成package.json
@@ -56,7 +57,8 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin("styles/main.css")
+        new CleanWebpackPlugin(['./app/dist']),
+        new ExtractTextPlugin("styles/main.css"),
     ],
     resolve: {
         extensions: ['.js', '.json', '.jsx']
