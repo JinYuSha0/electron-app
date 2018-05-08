@@ -1,10 +1,10 @@
 {
   "presets": [
     "react",
-    ["env", {
-      "targets": {
-        "node": "8.6.0"
-      }
-    }]
+    "es2015",
+    "stage-0"
+  ],
+  "plugins": [
+    "transform-runtime"
   ]
 }
