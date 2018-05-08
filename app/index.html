@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>electron脚手架</title>
+    <title>中宜视频系统</title>
     <style>
       #app {
         position: relative;
@@ -16,7 +16,13 @@
     <div id="app"></div>
 
     <script>
-      require('./dist/bundle.js')
+      try {
+          require('./dist/bundle.js')
+      } catch (e) {
+          setTimeout(() => {
+              window.location.reload()
+          }, 500)
+      }
     </script>
   </body>
 </html>
