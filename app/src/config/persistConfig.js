@@ -7,7 +7,7 @@ export default {
     transforms: [immutableTransform()],
     storage: createElectronStorage({
         electronStoreOpts: {
-            encryptionKey: 'zyjy8410'
+            encryptionKey: 'your password'
         }
     })
 }
