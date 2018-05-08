@@ -38,7 +38,7 @@ class Header extends Component {
             <header className="layoutHeader">
                 <div className="headerLogo" onClick={() => {jump('/')}}>
                     <span className="logo"/>
-                    <h2>中宜视频系统</h2>
+                    <h2>electron脚手架</h2>
                 </div>
 
                 <div className="headerController">
