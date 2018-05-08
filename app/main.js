@@ -3,7 +3,7 @@ const path = require('path')
 const url = require('url')
 const fs = require('fs')
 
-const DEV = process.env.NODE_ENV.trim() === 'development'
+const DEV = !!process.env.NODE_ENV
 DEV ? require('electron-reload')(__dirname) : null
 
 let mainWindow
