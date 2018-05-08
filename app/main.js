@@ -3,11 +3,8 @@ const path = require('path')
 const url = require('url')
 const fs = require('fs')
 
-fs.exists(path.join(__dirname, '../node_modules'), (exists) => {
-    if(exists) {
-        require('electron-reload')(__dirname)
-    }
-})
+const DEV = process.env.NODE_ENV.trim() === 'development'
+DEV ? require('electron-reload')(__dirname) : null
 
 let mainWindow
 
