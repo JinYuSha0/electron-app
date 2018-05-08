@@ -2,7 +2,7 @@
 
 const path = require('path')
 const webpack = require('webpack')
-
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
     watch: true,
@@ -43,6 +43,9 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new CleanWebpackPlugin(['./app/dist']),
+    ],
     resolve: {
         extensions: ['.js', '.json', '.jsx']
     }
